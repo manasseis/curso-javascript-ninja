@@ -16,20 +16,23 @@ var v2 = soma(2, 2) + 5
 /* 9
 
 // Declare uma nova variável, sem valor.
-?
+var myvar
 
 /*
 Crie uma função que adicione um valor à variável criada acima, e retorne a string:
     O valor da variável agora é VALOR.
 Onde VALOR é o novo valor da variável.
 */
-?
+function t3() {
+ myvar = 5
+ return 'O valor da variavel agora e ' + myvar
+ }
 
 // Invoque a função criada acima.
-?
+t3()
 
 // Qual o retorno da função? (Use comentários de bloco).
-?
+/ * O valor da variavel agora e 5
 
 /*
 Crie uma função com as seguintes características:
@@ -37,20 +40,24 @@ Crie uma função com as seguintes características:
 2. Se qualquer um dos três argumentos não estiverem preenchidos, a função deve retornar a string:
     Preencha todos os valores corretamente!
 3. O retorno da função deve ser a multiplicação dos 3 argumentos, somando `2` ao resultado da multiplicação.
-*/
-?
+
+function t6(x, y, z) {
+if (x == undefined || y == undefined || z == undefined) {
+return 'Preencha todos os valores corretamente' } else {
+return ( x * y * z) + 2
+}
 
 // Invoque a função criada acima, passando só dois números como argumento.
-?
+t6(2, 2)
 
 // Qual o resultado da invocação acima? (Use comentários para mostrar o valor retornado).
-?
+// Preencha todos os valores corretamente
 
 // Agora invoque novamente a função criada acima, mas passando todos os três argumentos necessários.
-?
+t6(2, 2, 2)
 
 // Qual o resultado da invocação acima? (Use comentários para mostrar o valor retornado).
-?
+// 10
 
 /*
 Crie uma função com as seguintes características:
