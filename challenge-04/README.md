@@ -29,28 +29,51 @@ seguintes propriedades (os valores devem ser do tipo mostrado abaixo):
 - `assentos` - Number - cinco por padrão
 - `quantidadePessoas` - Number - zero por padrão
 */
-?
+
+var corOriginal = 'Vermelha'
+var modeloOriginal = 'Vw'
+var marcaOriginal = 'UP'
+
+
+var carro = {
+marca: 'VW',
+modelo: 'UP',
+placa: 'EAN5465',
+ano: '2018',
+cor: 'vermelho',
+portas: 2,
+assentos: 5,
+quantidadePessoas: 0
+}
 
 /*
 Crie um método chamado `mudarCor` que mude a cor do carro conforme a cor
 passado por parâmetro.
 */
-?
+carro.mudacor = function(cor) {
+carro.cor = cor
+}
 
 /*
 Crie um método chamado `obterCor`, que retorne a cor do carro.
 */
-?
+carro.obterCor = function() {
+	carro.cor = corOriginal
+}
 
 /*
 Crie um método chamado `obterModelo` que retorne o modelo do carro.
 */
-?
+carro.obterModelo = function() {
+	carro.modelo = modeloOriginal
+}
 
 /*
 Crie um método chamado `obterMarca` que retorne a marca do carro.
 */
-?
+carro.obterMarca = function() {
+	carro.marca = marcaOriginal
+}
 
 /*
 Crie um método chamado `obterMarcaModelo`, que retorne:
