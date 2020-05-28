@@ -100,13 +100,18 @@ carro.adicionarPessoas = function(qtpessoas) {
 	if ( carro.quantidadePessoas == carro.assentos ) {
 		return 'O carro já está lotado!'
 	} 
+	
 	if( carro.quantidadePessoas + qtpessoas > carro.assentos ) {
-		return 'Só cabem mais '  + ( carro.assentos - carro.quantidadePessoas ) + ' pessoa'
-		} 
-		carro.quantidadePessoas += qtpessoas
+		if ( carro.assentos - carro.quantidadePessoas == 1 ){
+			return 'Só cabem mais '  + ( carro.assentos - carro.quantidadePessoas ) + ' pessoa'
+			}
+		return 'Só cabem mais '  + ( carro.assentos - carro.quantidadePessoas ) + ' pessoas'
+	}	
 	
-	
+	carro.quantidadePessoas += qtpessoas
+	return 'Já temos '+ carro.quantidadePessoas + ' pessoas no carro!'
 	}
+	
 
 /*
 Agora vamos verificar algumas informações do carro. Para as respostas abaixo,
