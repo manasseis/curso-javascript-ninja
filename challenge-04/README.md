@@ -30,18 +30,13 @@ seguintes propriedades (os valores devem ser do tipo mostrado abaixo):
 - `quantidadePessoas` - Number - zero por padrão
 */
 
-var corOriginal = 'Vermelha'
-var modeloOriginal = 'Vw'
-var marcaOriginal = 'UP'
-
-
 var carro = {
 marca: 'VW',
 modelo: 'UP',
 placa: 'EAN5465',
 ano: '2018',
 cor: 'vermelho',
-portas: 2,
+Quantasportas: 2,
 assentos: 5,
 quantidadePessoas: 0
 }
@@ -57,22 +52,23 @@ carro.cor = cor
 /*
 Crie um método chamado `obterCor`, que retorne a cor do carro.
 */
-carro.obterCor = function() {
-	carro.cor = corOriginal
+carro.mudarcor = function(cor) {
+carro.cor = cor
 }
 
 /*
 Crie um método chamado `obterModelo` que retorne o modelo do carro.
 */
 carro.obterModelo = function() {
-	carro.modelo = modeloOriginal
+	return carro.modelo 
 }
+
 
 /*
 Crie um método chamado `obterMarca` que retorne a marca do carro.
 */
 carro.obterMarca = function() {
-	carro.marca = marcaOriginal
+	return carro.marca
 }
 
 /*
@@ -80,7 +76,9 @@ Crie um método chamado `obterMarcaModelo`, que retorne:
 "Esse carro é um [MARCA] [MODELO]"
 Para retornar os valores de marca e modelo, utilize os métodos criados.
 */
-?
+carro.obterMarcaModelo = function() {
+return 'Esse carro é um ' + carro.obterMarca() + ' ' + carro.obterModelo()
+}
 
 /*
 Crie um método que irá adicionar pessoas no carro. Esse método terá as
@@ -108,22 +106,22 @@ retornar algum valor.
 
 Qual a cor atual do carro?
 */
-?
+carro.obterCor()
 
 // Mude a cor do carro para vermelho.
-?
+carro.mudacro('Azul')
+
 
 // E agora, qual a cor do carro?
-?
+carro.obtercor() // Azul
 
 // Mude a cor do carro para verde musgo.
-?
-
+carro.mudacor('verde musgo')
 // E agora, qual a cor do carro?
-?
+carro.obtercor() // Verde Musgo
 
 // Qual a marca e modelo do carro?
-?
+carro.obterMarcaModelo = function() // 'Esse carro é um VW UP'
 
 // Adicione 2 pessoas no carro.
 ?
