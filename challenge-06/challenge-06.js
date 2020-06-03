@@ -4,7 +4,10 @@ para começar o desafio.
 Declare uma variável chamada `championship` que receberá o nome do campeonato,
 e imprima o nome desse campeonato no console.
 */
-// ?
+var championship = function ( nomeCampeonato ) {
+    console.log(nomeCampeonato)
+}
+
 
 /*
 Declare uma variável chamada `teams`, que receberá um array com 5 elementos.
@@ -14,8 +17,8 @@ desafio.
 */
 // ?
 
+var teams = ['Palmeiras', 'Santos', 'São Paulo', 'Flamengo', 'Cachepó']
 console.log( 'Times que estão participando do campeonato:', teams );
-
 /*
 Crie uma função chamada `showTeamPosition` com as seguintes características:
     - A função deve receber um número por parâmetro;
@@ -38,7 +41,13 @@ Crie uma função chamada `showTeamPosition` com as seguintes características:
 Escolha 4 times do campeonato selecionado e mostre a posição dele, usando a
 função acima. Entre esses 4, adicione 1 que não esteja entre os 5 primeiros.
 */
-// ?
+function showTeamPosition( lugar ) {
+if( lugar <6 ){
+return 'O time que está em ' + lugar + 'º lugar é o ' +  teams[ lugar -1 ]
+} else {
+return 'Não temos a informação do time que está nessa posição."'
+}
+}
 
 /*
 Mostre os números de 20 a 30 no console (inclusive o 30), usando a estrutura de
