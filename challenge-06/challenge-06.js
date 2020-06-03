@@ -53,7 +53,12 @@ return 'Não temos a informação do time que está nessa posição."'
 Mostre os números de 20 a 30 no console (inclusive o 30), usando a estrutura de
 repetição "while".
 */
-// ?
+counter = 20
+while (counter <= 30) {
+    console.log(counter)
+    counter++
+}
+
 
 /*
 Crie uma função chamada `convertToHex`, com as seguintes características:
@@ -67,9 +72,36 @@ Crie uma função chamada `convertToHex`, com as seguintes características:
     a frase:
     "Não temos o equivalente hexadecimal para [COR]."
 */
-// ?
+function convertToHex(cor) {
+	switch(cor) {
+	case 'red':
+	console.log('#1111')
+	break
+	case 'green':
+	console.log('#2222')
+	break
+	case 'Yellow':
+	console.log('#3333')
+	break
+	case 'black':
+	console.log('#4444')
+	break
+	case 'blue':
+	console.log('#5555')
+	break
+	default:
+	console.log('Não temos o equivalente hexadecimal para ' + cor)
+}
+}
 
 /*
 Tente mostrar o hexadecimal de 8 cores diferentes usando a função criada acima.
 */
-// ?
+convertToHex('blue')
+convertToHex('red')
+convertToHex('pink')
+convertToHex('purple')
+convertToHex('green')
+convertToHex('yellow')
+convertToHex('black')
+convertToHex('rose')
