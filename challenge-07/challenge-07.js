@@ -9,24 +9,32 @@ A função deverá retornar o array atualizado.
 */
 function addItem( item ) {
 arr.push( item )
+return arr
 }
 
 /*
 Adicione um novo array ao array criado no início do desafio, com ao menos 3
 itens de tipos diferentes, mostrando o resultado no console.
 */
-addItem ('Manassies')
-addItem ('Katia')
-addItem ('Caio')
-// > arr
-[ 'ana', 1, 'maria', 'aa', null, 'Manassies', 'Katia', 'Caio' ]
+addItem ([1, {carro: 'ford', modelo: 'Ka'}, 'Marcas'])
+
+/*
+ 'ana',
+ 1,
+ 'maria',
+ 'aa',
+ null,
+ 'casa',
+ [ 1, 3, 5 ],
+ [ 1, { carro: 'ford', modelo: 'Ka' }, 'Marcas' ]
+*/
+
 /*
 Mostre no console o segundo elemento desse último array, criado acima, com a
 frase:
 "O segundo elemento do segundo array é [ELEMENTO]."
 */
-console.log('O segundo elemento do segundo array é ' + arr[1])
-// O segundo elemento do segundo array é 1
+console.log('O segundo elemento do segundo array é ' + arr[6][1])
 
 /*
 Mostre no console quantos itens tem o primeiro array criado, com a frase:
@@ -39,7 +47,7 @@ console.log('O primeiro array tem ' + arr.length + ' itens')
 Agora mostre no console quantos itens tem o segundo array criado, com a frase:
 "O segundo array tem [QUANTIDADE DE ITENS] itens."
 */
-console.log('O Segundo array tem ' + arr.length + ' itens')
+console.log(arr[6].length)
 
 /*
 Utilizando a estrutura de repetição `while`, mostre no console todos os números
