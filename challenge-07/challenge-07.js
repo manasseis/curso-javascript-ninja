@@ -84,11 +84,11 @@ Só vamos mudar o range:
 */
 function repetefor() {
 for(var i =100; i <=120; i++) 
-console.log( i++)
+i % 2 === 0 ? console.log( i++) : ''
 }
 
 
 function repetefor() {
 for(var i =111; i <=125; i++) 
-console.log( i++)
+i % 2 != 0 ? console.log( i++) : ''
 }
