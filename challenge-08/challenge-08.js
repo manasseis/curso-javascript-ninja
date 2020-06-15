@@ -4,7 +4,7 @@ Declare uma variável chamada `sum` e atribua a ela uma função chamada
 desses parâmetros.
 */
 var sum = function calculateSum( valor1, valor2 ) {
-return 'A soma de ' + valor1 + ' e ' + valor2 + ' é igual a ' + (valor1 + valor2) + '.'
+return valor1 + valor2
 }
 
 /*
@@ -12,7 +12,11 @@ Invoque a função criada acima, passando dois números que serão somados, e mo
 o resultado no console, com a frase:
 "A soma de [VALOR 1] e [VALOR2] é igual a [RESULTADO]."
 */
- sum(2, 5)
+var valor1 = 10
+var valor2 = 20
+console.log( 'A soma de ' + valor1 + ' e ' + valor2 + ' é igual a ' + sum(valor1, valor2) + '.')
+
+
 // A soma de 2 e 5é igual a 7.'
 
 /*
@@ -55,25 +59,28 @@ vai efetuar. Será uma string com os valores `+`, `-`, `*`, `/` ou `%`;
 */
   function calculator( operador ) {
    return function ccalc( valor1, valor2) {
-   switch(operador) {
-	case '+':
-	return console.log(valor1 + valor2)
-	break
-	case '-':
-	return console.log(valor1 - valor2)
-	break
-	case '*':
-	return console.log(valor1 * valor2)
-	break
-	case '/':
-	return console.log(valor1 / valor2)
-	break
-	case '%':
-	return console.log(valor1 % valor2)
-	break
-	default:
-	console.log('Operação inválida.')
-}
+	   var result
+	   switch(operador) {
+		case '+':
+		result = valor1 + valor2
+		break
+		case '-':
+		result = valor1 - valor2
+		break
+		case '*':
+		result = valor1 * valor2
+		break
+		case '/':
+		result = valor1 / valor2
+		break
+		case '%':
+		result = valor1 % valor2
+		break
+		default:
+		return 'Operação inválida.'
+		break
+	}
+return 'Resultado da operação: ' +  valor1 + ' ' + operador + ' ' + valor2 + ' = ' +  result + '.'
 }
 }
 /*
