@@ -17,7 +17,7 @@ Crie um objeto chamado `person`, que receba as seguintes propriedades:
 - 'name', 'age', 'weight' e 'birthday'. Preencha com os valores corretos
 para o nome, idade, peso e data de nascimento dessa pessoa.
 */
-// ?
+person = {name: 'Maria', age: 25, weigth: 85, birthday: '15/08/2018'}
 
 /*
 Use um loop para percorrer o objeto criado acima, mostrando no console
@@ -28,7 +28,13 @@ esse objeto tem.
 Após o loop, mostre a frase:
 'The person has [COUNTER] properties'
 */
-// ?
+var counter = 0
+for( var prop in person ) {
+counter++
+console.log( 'The ' + prop + ' of person is ' + person[prop])
+}
+console.log( counter )
+'The person has ' + counter + ' properties'
 
 /*
 Crie uma função chamada `moreThan`, que vai verificar se a pessoa (objeto
